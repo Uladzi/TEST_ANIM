@@ -1,0 +1,153 @@
+@keyframes square-animation {
+    from {
+        top: 0px;
+        background: gray;
+        width: 100px;
+    }
+    50% {
+        top: 220px;
+        background: red;
+        width: 300px;
+    }
+    to {
+        top: 0px;
+        background: gray;
+        width: 100px;
+    }
+}
+
+@keyframes circle-animation {
+    from {
+        bottom: 0px;
+        left: 0px;
+        background: red;
+    }
+    30% {
+        bottom: 110px;
+        left: 0px;
+        background: gray;
+    }
+    60% {
+        bottom: 110px;
+        left: 420px;
+        background: yellow;
+    }
+    to {
+        bottom: 0px;
+        left: 0px;
+        background: red;
+    }
+}
+
+@keyframes triangle-animation {
+    from {
+        bottom: 0px;
+        left: 0px;
+        border-bottom: 100px solid red;
+    }
+    40% {
+        bottom: 110px;
+        left: 0px;
+        border-bottom: 100px solid gray;
+    }
+    60% {
+        bottom: 220px;
+        left: 0px;
+        border-bottom: 100px solid red;
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+    80% {
+        bottom: 0px;
+        left: 520px;
+        border-bottom: 100px solid green;
+        transform: rotate(180deg);
+        transform: scale(2);
+    }
+    to {
+        bottom: 0px;
+        left: 0px;
+        border-bottom: 100px solid red;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rectangle-animation {
+    from {
+        left: 0px;
+        background: gray;
+        width: 200px;
+    }
+    50% {
+        left: 660px;
+        background: rgb(131, 5, 204);
+        width: 20px;
+    }
+    to {
+        left: 0px;
+        background: gray;
+        width: 200px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed black;
+}
+
+#square {
+    margin: 5px;
+    height: 100px;
+    background: red;
+    position: relative;
+    align-self: flex-end;
+    animation-name: square-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#circle {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+}
+
+#triangle {
+    margin: 5px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    position: relative;
+}
+
+#rectangle {
+    margin: 5px;
+    width: 200px;
+    height: 100px;
+    background: red;
+    position: relative;
+}
+
+.container:hover #circle {
+    animation-name: circle-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.container:hover #triangle {
+    animation-name: triangle-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.container:hover #rectangle {
+    animation-name: rectangle-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
