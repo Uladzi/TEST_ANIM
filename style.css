@@ -1,3 +1,15 @@
+@keyframes container-animation {
+    from {
+        background: white;
+    }
+    50% {
+        background: rgb(128, 128, 128);
+    }
+    to {
+        background: white;
+    }
+}
+
 @keyframes square-animation {
     from {
         top: 0px;
@@ -29,7 +41,7 @@
     }
     60% {
         bottom: 110px;
-        left: 420px;
+        left: 1000px;
         background: yellow;
     }
     to {
@@ -59,7 +71,7 @@
     }
     80% {
         bottom: 0px;
-        left: 520px;
+        left: 1100px;
         border-bottom: 100px solid green;
         transform: rotate(180deg);
         transform: scale(2);
@@ -79,7 +91,7 @@
         width: 200px;
     }
     50% {
-        left: 660px;
+        left: 1310px;
         background: rgb(131, 5, 204);
         width: 20px;
     }
@@ -132,6 +144,10 @@
     height: 100px;
     background: red;
     position: relative;
+}
+
+.container:hover {
+    animation: container-animation 5s steps(3) infinite;
 }
 
 .container:hover #circle {
